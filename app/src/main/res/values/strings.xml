@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">DeliveryApp</string>
+    <string name="login">Login</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="refrigerante_1_5l">Refrigerante 1,5L</string>
+    <string name="bebidas">Bebidas:</string>
+    <string name="r_25_00_exemplo">R$ 25,00</string>
+    <string name="nome_produto">Pizza Calabresa</string>
+    <string name="acompanhamentos">Acompanhamentos:</string>
+    <string name="promocao">Promoção:</string>
+    <string name="coca_cola">Coca-Cola</string>
+    <string name="pepsi">Pepsi</string>
+    <string name="guarana">Guaraná</string>
+    <string name="fanta_uva">Fanta Uva</string>
+    <string name="pizza">Pizza</string>
+    <string name="hamburguer">Hambúrguer</string>
+    <string name="categorias">Categorias</string>
+</resources>
