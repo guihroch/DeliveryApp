@@ -20,7 +20,7 @@ class LoginPage : AppCompatActivity() {
 
        window.statusBarColor = Color.parseColor("#FF000000")
 
-        binding.linearToCadastro.setOnClickListener {
+        binding.textToCadastroPage.setOnClickListener {
             val intent = Intent(this, CadastroPage::class.java)
             startActivity(intent)
         }
@@ -40,7 +40,7 @@ class LoginPage : AppCompatActivity() {
             startActivity(intent)
             binding.buttonLogin.visibility = View.VISIBLE
             binding.containerProgressBar.visibility = View.GONE
-            Toast.makeText(this, "Logado com Sucesso!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Logado com Sucesso!", Toast.LENGTH_SHORT).show()
         }, 1500)
     }
 }

@@ -6,14 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".activities.PagamentoPage">
 
+    <ImageView
+        android:id="@+id/ic_arrow_back_detalhes_page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_arrow_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+
     <TextView
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
         app:layout_constraintTop_toTopOf="parent"
         android:fontFamily="casual"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="70dp"
         android:text="Formas de Pagamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -21,63 +30,157 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/container_formas_pagamento"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="240dp">
 
         <RadioGroup
             android:layout_marginStart="5dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RadioButton
+                android:id="@+id/rb_cartao_credito"
                 android:text="Cartão de Crédito"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <RadioButton
+                android:id="@+id/rb_cartao_debito"
                 android:text="Cartão de Débito"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <RadioButton
+                android:id="@+id/rb_dinheiro"
                 android:text="Dinheiro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/edit_text_dinheiro"
+                android:visibility="gone"
+                android:background="@drawable/edit_text_normal"
+                android:hint="Troco para..."
+                android:textSize="14sp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"/>
             <RadioButton
+                android:id="@+id/rb_pix"
                 android:text="Pix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/edit_text_pix"
+                android:visibility="gone"
+                android:background="@drawable/edit_text_normal"
+                android:hint="Digite seu pix..."
+                android:textSize="14sp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"/>
         </RadioGroup>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/container_valor_total"
         android:layout_marginTop="50dp"
         app:layout_constraintTop_toBottomOf="@id/container_formas_pagamento"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="20dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear_valor_pedido"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10dp"
                 android:layout_weight="1"
-                android:text="Valor pedido:"
+                android:text="Valor Pedido:"
+                android:textStyle="bold"
+                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/text_valor"
                 android:layout_marginEnd="10dp"
                 android:text="valor"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Taxa Entrega:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/valor_taxa"
+                android:layout_marginEnd="10dp"
+                android:text="Grátis"
+                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/black"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="130dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Total:"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/valor_total_com_taxa"
+                android:layout_marginEnd="10dp"
+                android:text="R$ 5,00"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_pagamento"
+        android:text="Pagar"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/dark_red"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

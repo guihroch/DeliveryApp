@@ -49,7 +49,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-        style="@style/font_medium_home_page"
+        style="@style/Medium_Text_Home_Page"
         android:layout_marginTop="50dp"
         android:text="Promoção do dia"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,112 +57,73 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/img_promocao"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="80dp"
+        style="@style/MaterialCard_Promocao_Home_Page"
         android:background="@drawable/background_image_home_page"
-        app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linear_app_bar">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/imagem_pizza_promocao"
+            style="@style/ImageView_Promocao_Home_Page"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+            style="@style/Text_Promocao_Home_Page"
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
             android:background="@drawable/bg_promocao"
-            android:fontFamily="casual"
-            android:gravity="center"
             android:text="Pizza\n+\nRefrigerante 1,5L"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            />
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/text_categorias"
-        style="@style/font_medium_home_page"
+        style="@style/Medium_Text_Home_Page"
         android:text="@string/categorias"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_promocao" />
 
     <LinearLayout
         android:id="@+id/linear_categorias"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
+        style="@style/Container_Categorias_Home_Page"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_categorias">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/MaterialCard_pizza"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_weight="1"
-            app:strokeColor="@color/light_grey">
-
+            style="@style/MaterialCard_Categorias_Home_Page">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="center"
+                style="@style/ImageView_Categoria_Home_Page"
                 android:src="@drawable/imagem_pizza_calabresa" />
-
             <TextView
-                style="@style/font_small_home_page"
-                android:layout_gravity="center"
-                android:layout_marginTop="35dp"
-                android:text="Salgada" />
+                style="@style/Small_Text_Home_Page"
+                android:text="@string/tradicional" />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/MaterialCardPizzaDoce"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_weight="1"
-            app:strokeColor="@color/light_grey">
-
+            style="@style/MaterialCard_Categorias_Home_Page">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
+                style="@style/ImageView_Categoria_Home_Page"
                 android:src="@drawable/imagem_pizza_chocolate_preto_e_branco" />
 
             <TextView
-                style="@style/font_small_home_page"
-                android:layout_gravity="center"
-                android:layout_marginTop="35dp"
-                android:text="Doce" />
+                style="@style/Small_Text_Home_Page"
+                android:text="@string/doce" />
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
     <TextView
         android:id="@+id/txt_categoria_selecionada"
-        style="@style/font_medium_home_page"
+        style="@style/Medium_Text_Home_Page"
         android:text="@string/pizza"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linear_categorias" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:orientation="horizontal"
+        style="@style/RecyclerView_Home_Page"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_categoria_selecionada" />

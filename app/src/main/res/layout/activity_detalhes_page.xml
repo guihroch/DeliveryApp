@@ -171,6 +171,7 @@
         </RadioGroup>
         <TextView
             android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="casual"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -181,7 +182,7 @@
         <EditText
             android:background="@drawable/edit_text_normal"
             android:layout_marginHorizontal="20dp"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:hint="Remover algum acompanhamento..."
             android:padding="15dp"
             android:maxLines="2"

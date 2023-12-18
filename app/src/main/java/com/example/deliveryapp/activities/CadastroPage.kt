@@ -26,15 +26,15 @@ class CadastroPage : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.containerCadastrar.setOnClickListener {
+        binding.buttonCadastrar.setOnClickListener {
            cadastroNovoUsuario()
         }
     }
     private fun cadastroNovoUsuario(){
-        binding.containerCadastrar.visibility = View.INVISIBLE
+        binding.buttonCadastrar.visibility = View.INVISIBLE
         binding.containerProgressBar.visibility = View.VISIBLE
         Handler(Looper.getMainLooper()).postDelayed({
-            binding.containerCadastrar.visibility = View.VISIBLE
+            binding.buttonCadastrar.visibility = View.VISIBLE
             binding.containerProgressBar.visibility = View.GONE
             Toast.makeText(this, "Cadastrado com Sucesso!", Toast.LENGTH_LONG).show()
         }, 1500)

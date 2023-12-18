@@ -15,4 +15,14 @@
     <string name="pizza">Pizza</string>
     <string name="hamburguer">Hambúrguer</string>
     <string name="categorias">Categorias</string>
+    <string name="pagamento_realizado_com_sucesso">Pagamento realizado com sucesso</string>
+    <string name="senha">Senha</string>
+    <string name="clique_aqui">Clique Aqui</string>
+    <string name="ainda_n_o_possui_cadastro">Ainda não possui cadastro?</string>
+    <string name="delivery_app">Delivery App</string>
+    <string name="email">Email</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="tradicional">Tradicional</string>
+    <string name="doce">Doce</string>
 </resources>

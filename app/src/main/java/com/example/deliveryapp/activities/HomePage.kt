@@ -45,7 +45,7 @@ class HomePage : AppCompatActivity() {
         }
 
         binding.MaterialCardPizzaDoce.setOnClickListener {
-            confiAdapterPizzaDoce()
+            configAdapterPizzaDoce()
         }
 
         binding.MaterialCardPizza.setOnClickListener {
@@ -94,7 +94,7 @@ class HomePage : AppCompatActivity() {
         recyclerView.adapter = produtoAdapter
     }
 
-    private fun confiAdapterPizzaDoce(){
+    private fun configAdapterPizzaDoce(){
         val listaProduto: MutableList<Produto> = mutableListOf(
             Produto(
                 nome = "Pizza Chocolate Preto e Branco",
