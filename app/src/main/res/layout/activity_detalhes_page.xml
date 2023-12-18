@@ -10,11 +10,7 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linear_img_produto"
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:background="@color/light_grey"
-        android:gravity="center"
-        android:orientation="horizontal"
+        style="@style/Container_Imagem_Detalhes_Page"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -39,13 +35,9 @@
 
             <TextView
                 android:id="@+id/nome_produto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="casual"
+                style="@style/Big_Text_Detalhes_Page"
                 android:text="@string/nome_produto"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                 />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -57,14 +49,12 @@
 
             <TextView
                 android:id="@+id/text_valor_fixo"
-
+                style="@style/Small_Text_Detalhes_Page"
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="5dp"
                 android:text="@string/r_25_00_exemplo"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
                 />
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -76,30 +66,19 @@
 
                 <ImageView
                     android:id="@+id/button_remover"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
+                    style="@style/ImageView_Add_Remove_Detalhes_Page"
                     android:src="@drawable/ic_remove" />
 
                 <TextView
                     android:id="@+id/txt_quantidade"
-                    android:layout_width="30dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="12dp"
+                    style="@style/Text_Quantidade_Detalhes_Page"
                     android:background="@drawable/bg_text_quantidade"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:text="@string/_1"
+                     />
 
                 <ImageView
                     android:id="@+id/button_adicionar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
+                    style="@style/ImageView_Add_Remove_Detalhes_Page"
                     android:src="@drawable/ic_add" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -111,13 +90,13 @@
             android:orientation="horizontal">
 
             <TextView
-                style="@style/font_media_bold_detalhes_page"
+                style="@style/Medium_Text_Detalhes_Page"
                 android:textColor="@color/black"
                 android:text="@string/acompanhamentos" />
 
             <TextView
                 android:id="@+id/detalhe_produto"
-                style="@style/font_media_light"
+                style="@style/Small_Text_Detalhes_Page"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -127,19 +106,19 @@
             android:layout_height="wrap_content">
 
             <TextView
-                style="@style/font_media_bold_detalhes_page"
+                style="@style/Medium_Text_Detalhes_Page"
                 android:textColor="@color/black"
                 android:text="@string/promocao" />
 
             <TextView
-                style="@style/font_media_light"
+                style="@style/Small_Text_Detalhes_Page"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/refrigerante_1_5l" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
-            style="@style/font_media_bold_detalhes_page"
+            style="@style/Medium_Text_Detalhes_Page"
             android:textColor="@color/black"
             android:text="@string/bebidas" />
 
@@ -150,105 +129,84 @@
             android:orientation="horizontal">
 
             <RadioButton
-                style="@style/font_media_light"
+                style="@style/Small_Text_Detalhes_Page"
                 android:layout_weight="1"
                 android:text="@string/coca_cola" />
 
             <RadioButton
-                style="@style/font_media_light"
+                style="@style/Small_Text_Detalhes_Page"
                 android:layout_weight="1"
                 android:text="@string/pepsi" />
 
             <RadioButton
-                style="@style/font_media_light"
+                style="@style/Small_Text_Detalhes_Page"
                 android:layout_weight="1"
                 android:text="@string/guarana" />
 
             <RadioButton
-                style="@style/font_media_light"
+                style="@style/Small_Text_Detalhes_Page"
                 android:layout_weight="1"
                 android:text="@string/fanta_uva" />
         </RadioGroup>
         <TextView
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:fontFamily="casual"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:text="Preferências:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            style="@style/Medium_Text_Detalhes_Page"
+            android:text="@string/prefer_ncias"
+            android:layout_marginTop="0dp"
+            />
 
         <EditText
+            android:id="@+id/edit_preferencias"
+            style="@style/EditText_Detalhes_Page"
             android:background="@drawable/edit_text_normal"
-            android:layout_marginHorizontal="20dp"
-            android:textSize="14sp"
-            android:hint="Remover algum acompanhamento..."
-            android:padding="15dp"
-            android:maxLines="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <androidx.appcompat.widget.LinearLayoutCompat
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <androidx.cardview.widget.CardView
-            android:layout_weight="1"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="40dp"
-            android:backgroundTint="@color/light_grey"
-            android:layout_width="160dp"
-            android:layout_height="80dp">
-            <TextView
-                style="@style/font_media_light"
-                android:textStyle="bold"
-                android:text="Valor total"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                />
-            <TextView
-                android:id="@+id/text_valor_total"
-                android:layout_marginTop="40dp"
-                android:layout_marginStart="20dp"
-                android:text="R$ 50,00"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"/>
-        </androidx.cardview.widget.CardView>
+            android:hint="@string/preferencias"
+            />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/container_to_pagamento_page"
-            android:layout_marginHorizontal="20dp"
-            android:layout_weight="1"
-            android:layout_marginTop="40dp"
-            android:backgroundTint="@color/dark_red"
-            android:layout_width="160dp"
-            android:layout_height="80dp">
-            <TextView
-                android:layout_marginStart="10dp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:fontFamily="casual"
-                android:layout_gravity="center"
-                android:text="Finalizar Compra"
-                android:textSize="16sp"
-                />
-            <ImageView
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="25dp"
-                android:src="@drawable/ic_money"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </androidx.cardview.widget.CardView>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                style="@style/CardView_Valor_Final_Detalhes_Page"
+                android:backgroundTint="@color/light_grey">
+                <TextView
+                    style="@style/Medium_Text_Detalhes_Page"
+                    android:text="@string/valor_total"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    />
+                <TextView
+                    android:id="@+id/text_valor_total"
+                    style="@style/Big_Text_Detalhes_Page"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/r_25_00"
+                   />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/container_to_pagamento_page"
+                style="@style/CardView_Valor_Final_Detalhes_Page"
+                android:backgroundTint="@color/dark_red">
+                <ImageView
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/ic_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    style="@style/Medium_Text_Detalhes_Page"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:text="@string/finalizar_compra"
+                    android:textSize="16sp"
+                    />
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/arrow_back_home_page"
         android:src="@drawable/ic_arrow_back"

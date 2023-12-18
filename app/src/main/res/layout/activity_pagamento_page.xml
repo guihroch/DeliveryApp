@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="240dp">
+        android:layout_height="200dp">
 
         <RadioGroup
             android:layout_marginStart="5dp"
@@ -58,24 +58,10 @@
                 android:layout_height="wrap_content"/>
             <EditText
                 android:id="@+id/edit_text_dinheiro"
+                android:inputType="number"
                 android:visibility="gone"
                 android:background="@drawable/edit_text_normal"
                 android:hint="Troco para..."
-                android:textSize="14sp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"/>
-            <RadioButton
-                android:id="@+id/rb_pix"
-                android:text="Pix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <EditText
-                android:id="@+id/edit_text_pix"
-                android:visibility="gone"
-                android:background="@drawable/edit_text_normal"
-                android:hint="Digite seu pix..."
                 android:textSize="14sp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginStart="20dp"

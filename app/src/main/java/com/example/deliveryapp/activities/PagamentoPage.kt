@@ -48,19 +48,11 @@ class PagamentoPage : AppCompatActivity() {
         val dialogCarregando = DialogCarregando(this)
        if (binding.rbDinheiro.isChecked && binding.editTextDinheiro.text.isEmpty()){
            binding.editTextDinheiro.visibility = View.VISIBLE
-           binding.editTextPix.visibility = View.GONE
            Toast.makeText(this, "Informe o troco", Toast.LENGTH_SHORT).show()
-       } else if(binding.rbPix.isChecked && binding.editTextPix.text.isEmpty()){
-           binding.editTextPix.visibility = View.VISIBLE
-           binding.editTextDinheiro.visibility = View.GONE
-           Toast.makeText(this, "Informe o pix", Toast.LENGTH_SHORT).show()
-       } else if(!binding.rbPix.isChecked && !binding.rbDinheiro.isChecked && !binding.rbCartaoCredito.isChecked && !binding.rbCartaoDebito.isChecked) {
-           Toast.makeText(this, "Selecione uma forma de pagamento", Toast.LENGTH_SHORT).show()
        }
        else {
            dialogCarregando.iniciarCarregamentoAlertDialog()
         Handler(Looper.getMainLooper()).postDelayed({
-            Toast.makeText(this, "Pagamento realizado com sucesso", Toast.LENGTH_SHORT).show()
             dialogCarregando.liberarAlertDialog()
             val intent = Intent(this, FinalizadoPage::class.java)
             startActivity(intent)

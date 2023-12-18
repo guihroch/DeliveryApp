@@ -186,14 +186,15 @@
             </style>
 
 
+ //Detalhes Page
+    <style name="Small_Text_Detalhes_Page">
+        <item name="fontFamily">casual</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 
-
-
-
-
-
-
-    <style name="font_media_bold_detalhes_page" >
+    <style name="Medium_Text_Detalhes_Page" >
         <item name="fontFamily">casual</item>
         <item name="android:textSize">14sp</item>
         <item name="android:layout_marginStart">20dp</item>
@@ -203,21 +204,55 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="font_media_light">
+    <style name="Big_Text_Detalhes_Page">
+        <item name="android:textSize">20sp</item>
         <item name="fontFamily">casual</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="font_small_home_page">
-        <item name="android:textSize">12sp</item>
-        <item name="fontFamily">casual</item>
+        <item name="android:layout_marginTop">5dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="Text_Quantidade_Detalhes_Page">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">casual</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
+    <style name="ImageView_Add_Remove_Detalhes_Page">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CardView_Valor_Final_Detalhes_Page">
+        <item name="android:layout_width">160dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginHorizontal" tools:ignore="NewApi">20dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Container_Imagem_Detalhes_Page">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">260dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="background">@color/light_grey</item>
+    </style>
+
+    <style name="EditText_Detalhes_Page">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">15dp</item>
+        <item name="maxLines">2</item>
+    <item name="android:layout_marginHorizontal" tools:ignore="NewApi">20dp</item>
+    </style>
 
 </resources>

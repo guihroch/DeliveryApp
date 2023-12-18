@@ -22,7 +22,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
-            android:text="Processando pagamento..."
+            android:text="@string/processando_seu_pedido"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/progress_carregando"
             android:layout_width="wrap_content"
