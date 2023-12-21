@@ -13,10 +13,9 @@
         android:id="@+id/text_cadastrar"
         style="@style/Big_Text_Login_Page"
         android:text="Pizzaria do Zé"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         style="@style/Medium_Text_Login_Page"
@@ -24,95 +23,96 @@
         android:text="@string/delivery_app"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_cadastrar"
-        />
+        app:layout_constraintTop_toBottomOf="@id/text_cadastrar" />
 
     <TextView
-        style="@style/Medium_Text_Login_Page"
         android:id="@+id/textView_form_email"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Medium_Text_Login_Page"
         android:layout_marginTop="260dp"
         android:text="@string/email"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        style="@style/Custom_EditText_Form"
-        android:id="@+id/edit_email"
-        android:inputType="textEmailAddress"
-        android:background="@drawable/edit_text_shape"
-        app:layout_constraintTop_toBottomOf="@id/textView_form_email"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_edit_email"
+        style="@style/Custom_EditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/textView_form_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_edit_text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/text_senha"
         style="@style/Medium_Text_Login_Page"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/senha"
         app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/edit_email"/>
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_email" />
 
-    <EditText
-        android:id="@+id/edit_senha"
-        style="@style/Custom_EditText_Form"
-        android:inputType="numberPassword"
-        android:background="@drawable/edit_text_shape"
-        app:layout_constraintTop_toBottomOf="@id/text_senha"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_edit_senha"
+        style="@style/Custom_EditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/text_senha">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_text_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edit_text" />
+</com.google.android.material.textfield.TextInputLayout>
 
 
+<androidx.appcompat.widget.AppCompatButton
+style="@style/Button_Login_Page"
+android:background="@drawable/button_shape"
+android:id="@+id/button_login"
+android:text="@string/login"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/layout_edit_senha" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_login"
-        style="@style/Button_Login_Page"
-        android:text="@string/login"
-        android:background="@drawable/button_shape"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_senha"
-        />
+<androidx.appcompat.widget.LinearLayoutCompat
+style="@style/Button_Login_Page"
+android:background="@drawable/button_shape"
+android:backgroundTint="@color/dark_red"
+android:id="@+id/container_progressBar"
+android:visibility="gone"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/layout_edit_senha">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/container_progressBar"
-        android:visibility="gone"
-        style="@style/Button_Login_Page"
-        android:backgroundTint="@color/dark_red"
-        android:background="@drawable/button_shape"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_senha"
-        >
+<ProgressBar
+    style="@style/Custom_ProgressBar"
+    android:id="@+id/progressBar" />
+</androidx.appcompat.widget.LinearLayoutCompat><LinearLayout
+style="@style/Container_Cadastrar_Login_Page"
+android:id="@+id/linear_to_cadastro"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/button_login">
+<TextView
+    style="@style/Medium_Text_Login_Page"
+    android:layout_marginStart="0dp"
+    android:text="@string/ainda_n_o_possui_cadastro"
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="@style/Custom_ProgressBar"/>
-    </androidx.appcompat.widget.LinearLayoutCompat>
-    <LinearLayout
-        android:id="@+id/linear_to_cadastro"
-        style="@style/Container_Cadastrar_Login_Page"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_login"
-        >
-        <TextView
-            style="@style/Medium_Text_Login_Page"
-            android:layout_marginStart="0dp"
-            android:text="@string/ainda_n_o_possui_cadastro"
+    />
 
-           />
-        <TextView
-            android:id="@+id/text_to_cadastro_page"
-            style="@style/Medium_Text_Login_Page"
-            android:textColor="@color/dark_red"
-            android:layout_marginStart="5dp"
-            android:text="@string/cadastrar"
-            />
+<TextView
+    style="@style/Medium_Text_Login_Page"
+    android:id="@+id/text_to_cadastro_page"
+    android:layout_marginStart="5dp"
+    android:text="@string/cadastrar"
+    android:textColor="@color/dark_red" />
 
 
+</LinearLayout>
 
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,4 +32,16 @@
     <string name="r_25_00">R$ 25,00</string>
     <string name="prefer_ncias">Preferências:</string>
     <string name="processando_seu_pedido">Processando seu pedido...</string>
+    <string name="valor_pedido">Valor Pedido:</string>
+    <string name="taxa_entrega">Taxa Entrega:</string>
+    <string name="valor">valor</string>
+    <string name="gr_tis">Grátis</string>
+    <string name="formas_de_pagamento">Formas de Pagamento</string>
+    <string name="resumo">Resumo</string>
+    <string name="pagar">Pagar</string>
+    <string name="total">Total:</string>
+    <string name="r_35_00">R$ 35,00</string>
+    <string name="cart_o_de_cr_dito">Cartão de Crédito</string>
+    <string name="cart_o_de_d_bito">Cartão de Débito</string>
+    <string name="dinheiro">Dinheiro</string>
 </resources>

@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.deliveryapp.R
+import com.example.deliveryapp.R.drawable.categoria_nao_selecionada
 import com.example.deliveryapp.adapter.ProdutoAdapter
 import com.example.deliveryapp.databinding.ActivityHomePageBinding
 import com.example.deliveryapp.model.Produto
@@ -27,29 +28,34 @@ class HomePage : AppCompatActivity() {
         binding = ActivityHomePageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.statusBarColor = Color.parseColor("#FF000000")
+        window.statusBarColor = Color.parseColor("#85040F")
 
         configProdutoAdapterPizzaSalgada()
         configToolBar()
 
 
-
-        binding.linearIcBuscar.setOnClickListener {
-            buscarSelecionado()
-        }
-        binding.linearIcHome.setOnClickListener {
-            homeSelecionado()
-        }
-        binding.linearIcConfig.setOnClickListener {
-            configSelecionado()
-        }
-
         binding.MaterialCardPizzaDoce.setOnClickListener {
             configAdapterPizzaDoce()
+            binding.MaterialCardPizzaDoce.setCardBackgroundColor(Color.parseColor("#85040F"))
+            binding.textPizzaDoce.setTextColor(Color.parseColor("#FFFFFFFF"))
+
+            binding.MaterialCardTradicional.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
+            binding.textPizzaTradicional.setTextColor(Color.parseColor("#FF000000"))
         }
 
-        binding.MaterialCardPizza.setOnClickListener {
+        binding.MaterialCardTradicional.setOnClickListener {
             configProdutoAdapterPizzaSalgada()
+            binding.MaterialCardTradicional.setCardBackgroundColor(Color.parseColor("#85040F"))
+            binding.textPizzaTradicional.setTextColor(Color.parseColor("#FFFFFFFF"))
+
+            binding.MaterialCardPizzaDoce.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
+            binding.textPizzaDoce.setTextColor(Color.parseColor("#FF000000"))
+
+
+
+          //  binding.MaterialCardPizzaDoce.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
+           // binding.textPizzaDoce.setTextColor(Color.parseColor("#85040F"))
+
         }
 
 
@@ -63,28 +69,29 @@ class HomePage : AppCompatActivity() {
             Produto(
                 nome = "Pizza Calabresa",
                 img = R.drawable.imagem_pizza_calabresa,
-                valor = "22.50",
+                valor = "34.50",
                 detalhes = "Mussarela, calabresa e cebola."
             ),
             Produto(
-                nome = "Pizza Frango Catupiry",
-                img = R.drawable.imagem_pizza_frango,
-                valor = "25.00",
+                nome = "Pizza Mussarela",
+                img = R.drawable.imagem_pizza_mussarela,
+                valor = "35.00",
                 detalhes = "Mussarela, frango e catupiry."
             ),
             Produto(
                 nome = "Pizza Portuguesa",
                 img = R.drawable.imagem_pizza_portuguesa,
-                valor = "22.50",
+                valor = "33.00",
                 detalhes = "Mussarela, pimentão, tomate, palmito, azeitona, presunto e cebola."
             ),
             Produto(
-                nome = "Pizza Mussarela",
-                img = R.drawable.imagem_pizza_mussarela,
-                valor = "22.50",
+                nome = "Pizza Frango Catupiry",
+                img = R.drawable.imagem_pizza_frango,
+                valor = "35.00",
                 detalhes = "Mussarela, bacon, e azeitona."
             ),
             )
+        binding.txtCategoriaSelecionada.text = "Tradicional"
 
         val recyclerView = binding.recyclerView
         recyclerView.setHasFixedSize(true)
@@ -99,28 +106,29 @@ class HomePage : AppCompatActivity() {
             Produto(
                 nome = "Pizza Chocolate Preto e Branco",
                 img = R.drawable.imagem_pizza_chocolate_preto_e_branco,
-                valor = "22.50",
+                valor = "30.00",
                 detalhes = "Chocolate ao leite, chocolate branco e cereja."
             ),
             Produto(
                 nome = "Pizza Confete",
                 img = R.drawable.imagem_pizza_confete,
-                valor = "25.00",
+                valor = "34.50",
                 detalhes = "chocolate ao leite e confete."
             ),
             Produto(
                 nome = "Pizza Chocolate com Morango",
                 img = R.drawable.imagem_pizza_chocolate_morango,
-                valor = "22.50",
+                valor = "35.00",
                 detalhes = "Chocolate ao leite, morango e pedaços de chocolate."
             ),
             Produto(
                 nome = "Pizza Banana com Canela",
                 img = R.drawable.imagem_pizza_banana_canela,
-                valor = "22.50",
+                valor = "33.50",
                 detalhes = "Banana, leite condensado e canela."
             ),
             )
+        binding.txtCategoriaSelecionada.text = "Doce"
         val recyclerView = binding.recyclerView
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager =
@@ -151,45 +159,5 @@ class HomePage : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun configSelecionado() {
-        binding.icSearch.visibility = View.VISIBLE
-        binding.icSearchSelected.visibility = View.GONE
-        binding.textIconBuscar.setTextColor(Color.parseColor("#AAA9A9"))
 
-        binding.icSettingsSelected.visibility = View.VISIBLE
-        binding.icSettings.visibility = View.GONE
-        binding.textIconConfiguracao.setTextColor(Color.parseColor("#85040F"))
-
-        binding.icHome.visibility = View.VISIBLE
-        binding.icHomeSelected.visibility = View.GONE
-        binding.textIconHome.setTextColor(Color.parseColor("#AAA9A9"))
     }
-
-    private fun homeSelecionado() {
-        binding.icSearch.visibility = View.VISIBLE
-        binding.icSearchSelected.visibility = View.GONE
-        binding.textIconBuscar.setTextColor(Color.parseColor("#AAA9A9"))
-
-        binding.icHomeSelected.visibility = View.VISIBLE
-        binding.icHome.visibility = View.GONE
-        binding.textIconHome.setTextColor(Color.parseColor("#85040F"))
-
-        binding.icSettings.visibility = View.VISIBLE
-        binding.icSettingsSelected.visibility = View.GONE
-        binding.textIconConfiguracao.setTextColor(Color.parseColor("#AAA9A9"))
-    }
-
-    private fun buscarSelecionado() {
-        binding.icSearch.visibility = View.GONE
-        binding.icSearchSelected.visibility = View.VISIBLE
-        binding.textIconBuscar.setTextColor(Color.parseColor("#85040F"))
-
-        binding.icHomeSelected.visibility = View.GONE
-        binding.icHome.visibility = View.VISIBLE
-        binding.textIconHome.setTextColor(Color.parseColor("#AAA9A9"))
-
-        binding.icSettings.visibility = View.VISIBLE
-        binding.icSettingsSelected.visibility = View.GONE
-        binding.textIconConfiguracao.setTextColor(Color.parseColor("#AAA9A9"))
-    }
-}

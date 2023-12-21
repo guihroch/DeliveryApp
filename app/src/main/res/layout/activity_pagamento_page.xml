@@ -8,165 +8,150 @@
 
     <ImageView
         android:id="@+id/ic_arrow_back_detalhes_page"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_margin="20dp"
         android:src="@drawable/ic_arrow_back"
-        android:layout_width="20dp"
-        android:layout_height="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:fontFamily="casual"
-        android:textSize="22sp"
-        android:textStyle="bold"
+        android:id="@+id/text_form_pagamento"
+        style="@style/Big_Text_Pagamento_Page"
         android:layout_marginTop="70dp"
-        android:text="Formas de Pagamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:text="@string/formas_de_pagamento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/container_formas_pagamento"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="160dp"
+        style="@style/MaterialCard_FormasPagamento_Page"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_form_pagamento">
 
         <RadioGroup
-            android:layout_marginStart="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp">
+
             <RadioButton
                 android:id="@+id/rb_cartao_credito"
-                android:text="Cartão de Crédito"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                style="@style/Small_Text_Pagamento_Page"
+                android:text="@string/cart_o_de_cr_dito" />
+
             <RadioButton
                 android:id="@+id/rb_cartao_debito"
-                android:text="Cartão de Débito"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <RadioButton
-                android:id="@+id/rb_dinheiro"
-                android:text="Dinheiro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <EditText
-                android:id="@+id/edit_text_dinheiro"
-                android:inputType="number"
-                android:visibility="gone"
-                android:background="@drawable/edit_text_normal"
-                android:hint="Troco para..."
-                android:textSize="14sp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"/>
+                style="@style/Small_Text_Pagamento_Page"
+                android:text="@string/cart_o_de_d_bito" />
+
+                <RadioButton
+                    android:id="@+id/rb_dinheiro"
+                    style="@style/Small_Text_Pagamento_Page"
+                    android:text="@string/dinheiro" />
+
+
+
         </RadioGroup>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/container_valor_total"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@id/container_formas_pagamento"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/MaterialCard_FormasPagamento_Page"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="20dp"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_resumo"
+        >
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/linear_valor_pedido"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
             <TextView
-                android:layout_marginStart="10dp"
+                style="@style/Medium_Text_Pagamento_Page"
                 android:layout_weight="1"
-                android:text="Valor Pedido:"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:text="@string/valor_pedido" />
+
             <TextView
                 android:id="@+id/text_valor"
+                style="@style/Small_Text_Pagamento_Page"
                 android:layout_marginEnd="10dp"
-                android:text="valor"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:text="@string/valor" />
         </androidx.appcompat.widget.LinearLayoutCompat>
+
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
             <TextView
-                android:layout_marginStart="10dp"
+                style="@style/Medium_Text_Pagamento_Page"
                 android:layout_weight="1"
-                android:text="Taxa Entrega:"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:text="@string/taxa_entrega" />
+
             <TextView
                 android:id="@+id/valor_taxa"
-                android:layout_marginEnd="10dp"
-                android:text="Grátis"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                style="@style/Small_Text_Pagamento_Page"
+                android:text="@string/gr_tis" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_marginHorizontal="5dp"
-            android:background="@color/black"
-            android:layout_marginTop="100dp"
             android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/light_grey" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_marginTop="130dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp">
+
             <TextView
-                android:layout_marginStart="10dp"
+                style="@style/Big_Text_Pagamento_Page"
+                android:textSize="24sp"
                 android:layout_weight="1"
-                android:text="Total:"
-                android:textStyle="bold"
-                android:textSize="26sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:text="@string/total"
+                android:layout_marginTop="0dp"
+                 />
+
             <TextView
-                android:id="@+id/valor_total_com_taxa"
+                style="@style/Big_Text_Pagamento_Page"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="10dp"
-                android:text="R$ 5,00"
-                android:textStyle="bold"
-                android:textSize="26sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:id="@+id/valor_total_com_taxa"
+                android:text="@string/r_35_00"
+                android:textSize="24sp"
+                />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_pagamento"
-        android:text="Pagar"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:backgroundTint="@color/dark_red"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="60dp"
+        style="@style/Button_Pagamento_Page"
+        android:text="@string/pagar"
+        app:layout_constraintTop_toBottomOf="@id/container_valor_total"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/text_resumo"
+        style="@style/Big_Text_Pagamento_Page"
+        android:text="@string/resumo"
+        app:layout_constraintBottom_toTopOf="@+id/container_valor_total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_formas_pagamento" />
+
+    <EditText
+        app:layout_constraintEnd_toEndOf="@id/container_formas_pagamento"
+        app:layout_constraintBottom_toBottomOf="@id/container_formas_pagamento"
+       app:layout_constraintStart_toEndOf="@id/radio_group"
+        style="@style/EditText_Pagamento_Page"
+        android:id="@+id/edit_text_dinheiro"
+        android:background="@drawable/edit_text_normal"
+        tools:ignore="NotSibling" />
 </androidx.constraintlayout.widget.ConstraintLayout>

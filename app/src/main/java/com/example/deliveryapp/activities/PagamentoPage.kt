@@ -45,10 +45,16 @@ class PagamentoPage : AppCompatActivity() {
 
 
     private fun selecionarFormaPagamento() {
+        val cartaoCredito = binding.rbCartaoCredito
+        val cartaoDebito = binding.rbCartaoDebito
+        val dinheiro = binding.rbDinheiro
         val dialogCarregando = DialogCarregando(this)
        if (binding.rbDinheiro.isChecked && binding.editTextDinheiro.text.isEmpty()){
+
            binding.editTextDinheiro.visibility = View.VISIBLE
            Toast.makeText(this, "Informe o troco", Toast.LENGTH_SHORT).show()
+       } else if(!cartaoDebito.isChecked && !cartaoCredito.isChecked && !dinheiro.isChecked) {
+           Toast.makeText(this, "Selecione uma forma de pagamento", Toast.LENGTH_SHORT).show()
        }
        else {
            dialogCarregando.iniciarCarregamentoAlertDialog()

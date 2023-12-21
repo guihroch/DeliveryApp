@@ -34,9 +34,9 @@
         android:text="@string/nome_completo"
         />
     <EditText
-        style="@style/Custom_EditText_Form"
+        style="@style/Custom_EditText"
         android:id="@+id/edit_nome"
-        android:background="@drawable/edit_text_shape"
+        android:background="@drawable/custom_edit_text"
         app:layout_constraintTop_toBottomOf="@id/textView_nome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,9 +51,9 @@
 
         />
     <EditText
-        style="@style/Custom_EditText_Form"
-        android:id="@+id/edit_email"
-        android:background="@drawable/edit_text_shape"
+        style="@style/Custom_EditText"
+        android:id="@+id/layout_edit_email"
+        android:background="@drawable/custom_edit_text"
         app:layout_constraintTop_toBottomOf="@id/textView_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,16 +62,16 @@
         style="@style/Medium_Text_Cadastro_Page"
         android:text="@string/senha"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_email"/>
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_email"/>
 
     <EditText
-        android:id="@+id/edit_senha"
+        android:id="@+id/layout_edit_senha"
         android:layout_marginTop="40dp"
-        android:background="@drawable/edit_text_shape"
-        app:layout_constraintTop_toBottomOf="@id/edit_email"
+        android:background="@drawable/custom_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/Custom_EditText_Form"/>
+        style="@style/Custom_EditText"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_cadastrar"
@@ -80,7 +80,7 @@
         android:background="@drawable/button_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_senha"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_senha"
         />
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -91,7 +91,7 @@
         android:background="@drawable/button_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_senha"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_senha"
         >
 
         <ProgressBar
