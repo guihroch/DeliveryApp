@@ -11,8 +11,8 @@
 
     <TextView
         android:id="@+id/text_cadastrar"
-        style="@style/Big_Text_Login_Page"
-        android:text="Pizzaria do Zé"
+        style="@style/Big_Text_Home_Page"
+        android:text="La Bella\nPizzaria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,6 +41,7 @@
         app:layout_constraintTop_toBottomOf="@id/textView_form_email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:maxLines="1"
             android:id="@+id/edit_text_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +51,7 @@
     <TextView
         android:id="@+id/text_senha"
         style="@style/Medium_Text_Login_Page"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="@string/senha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_edit_email" />
@@ -63,6 +64,7 @@
         app:layout_constraintTop_toBottomOf="@id/text_senha">
 
     <com.google.android.material.textfield.TextInputEditText
+        android:maxLines="1"
         android:id="@+id/edit_text_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,7 +84,7 @@ app:layout_constraintTop_toBottomOf="@id/layout_edit_senha" />
 <androidx.appcompat.widget.LinearLayoutCompat
 style="@style/Button_Login_Page"
 android:background="@drawable/button_shape"
-android:backgroundTint="@color/dark_red"
+android:backgroundTint="@color/black"
 android:id="@+id/container_progressBar"
 android:visibility="gone"
 app:layout_constraintEnd_toEndOf="parent"
@@ -111,8 +113,18 @@ app:layout_constraintTop_toBottomOf="@id/button_login">
     android:layout_marginStart="5dp"
     android:text="@string/cadastrar"
     android:textColor="@color/dark_red" />
-
-
 </LinearLayout>
+
+    <TextView
+        android:textSize="10sp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Rua Henrique Moscoso, 210 - Praia da Costa, Vila Velha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

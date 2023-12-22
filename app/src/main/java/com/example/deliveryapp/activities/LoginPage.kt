@@ -26,9 +26,8 @@ class LoginPage : AppCompatActivity() {
         }
 
         binding.buttonLogin.setOnClickListener {
-           // verificarCamposPreenchidos()
-            val intent = Intent(this, HomePage::class.java)
-            startActivity(intent)
+            verificarCamposPreenchidos()
+
 
         }
 

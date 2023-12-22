@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.deliveryapp.R
 import com.example.deliveryapp.databinding.ActivityDetalhesPageBinding
 import java.text.DecimalFormat
@@ -38,9 +39,7 @@ class DetalhesPage : AppCompatActivity() {
             voltarHomePage()
         }
         binding.containerToPagamentoPage.setOnClickListener {
-            val intent = Intent(this, PagamentoPage::class.java)
-            intent.putExtra("valor", binding.textValorTotal.text)
-            startActivity(intent)
+            logicaParaPagamentoPage()
         }
 
 
@@ -79,5 +78,18 @@ class DetalhesPage : AppCompatActivity() {
     private fun voltarHomePage(){
         val intent = Intent(this, HomePage::class.java)
         finish()
+    }
+    private fun logicaParaPagamentoPage(){
+        val coca = binding.bebidaCoca.isChecked
+        val pepsi = binding.bebidaPepsi.isChecked
+        val guarana = binding.bebidaGuarana.isChecked
+        val fanta = binding.bebidaFanta.isChecked
+        if (!coca && !pepsi && !guarana && !fanta) {
+            Toast.makeText(this, "Selecione uma bebida", Toast.LENGTH_SHORT).show()
+        } else {
+            val intent = Intent(this, PagamentoPage::class.java)
+            intent.putExtra("valor", binding.textValorTotal.text)
+            startActivity(intent)
+        }
     }
 }

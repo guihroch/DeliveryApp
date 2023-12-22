@@ -13,7 +13,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.deliveryapp.R
-import com.example.deliveryapp.R.drawable.categoria_nao_selecionada
 import com.example.deliveryapp.adapter.ProdutoAdapter
 import com.example.deliveryapp.databinding.ActivityHomePageBinding
 import com.example.deliveryapp.model.Produto
@@ -28,7 +27,7 @@ class HomePage : AppCompatActivity() {
         binding = ActivityHomePageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.statusBarColor = Color.parseColor("#85040F")
+        window.statusBarColor = Color.parseColor("#FF000000")
 
         configProdutoAdapterPizzaSalgada()
         configToolBar()

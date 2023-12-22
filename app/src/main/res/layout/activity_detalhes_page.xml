@@ -129,21 +129,25 @@
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/bebida_coca"
                 style="@style/Small_Text_Detalhes_Page"
                 android:layout_weight="1"
                 android:text="@string/coca_cola" />
 
             <RadioButton
+                android:id="@+id/bebida_pepsi"
                 style="@style/Small_Text_Detalhes_Page"
                 android:layout_weight="1"
                 android:text="@string/pepsi" />
 
             <RadioButton
+                android:id="@+id/bebida_guarana"
                 style="@style/Small_Text_Detalhes_Page"
                 android:layout_weight="1"
                 android:text="@string/guarana" />
 
             <RadioButton
+                android:id="@+id/bebida_fanta"
                 style="@style/Small_Text_Detalhes_Page"
                 android:layout_weight="1"
                 android:text="@string/fanta_uva" />
