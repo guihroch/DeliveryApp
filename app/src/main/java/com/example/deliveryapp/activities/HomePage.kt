@@ -30,7 +30,7 @@ class HomePage : AppCompatActivity() {
         window.statusBarColor = Color.parseColor("#FF000000")
 
         configProdutoAdapterPizzaSalgada()
-        configToolBar()
+
 
 
         binding.MaterialCardPizzaDoce.setOnClickListener {
@@ -136,27 +136,8 @@ class HomePage : AppCompatActivity() {
         recyclerView.adapter = produtoAdapter
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.top_menu, menu)
-        return super.onCreateOptionsMenu(menu)
 
-    }
 
-    private fun configToolBar() {
-        setSupportActionBar(binding.customToolbar)
-        supportActionBar?.title = null
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.ic_logout -> {
-                val intent = Intent(applicationContext, LoginPage::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
 
     }

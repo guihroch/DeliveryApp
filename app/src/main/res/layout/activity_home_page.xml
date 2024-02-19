@@ -5,52 +5,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activities.HomePage">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linear_app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="textStart"
+        android:layout_height="90dp"
+
+        android:background="@drawable/background_toolbar"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/text_entregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Localização Atual"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_entregar">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/custom_toolbar"
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:titleTextColor="@color/white">
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="20dp"
+                android:text="R. Inácio Higino, 600"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
 
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="start"
-                    android:src="@drawable/ic_location" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="casual"
-                    android:text="R. Inácio Higino, 600"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-            </androidx.appcompat.widget.Toolbar>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/text_promocao"
@@ -65,20 +86,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:text="Bem-Vindo"
+            android:text="Promoção do dia"
             android:textColor="@color/dark_red"
-            android:textSize="36sp" />
+            android:gravity="center"
+            android:textSize="20sp" />
 
         <TextView
+            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="casual"
-            android:text="Confira a promoção do dia!"
-            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:text="Confira aqui!"
             android:textSize="16sp"
-            android:textStyle="bold" />
+             />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
@@ -97,19 +117,25 @@
 
         <TextView
             style="@style/Text_Promocao_Home_Page"
-            android:layout_width="100dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="casual"
             android:background="@drawable/bg_promocao"
             android:text="Pizza\n+\nRefrigerante 1,5L" />
     </androidx.cardview.widget.CardView>
+
+
 
     <TextView
         android:id="@+id/text_categorias"
         style="@style/Medium_Text_Home_Page"
         android:text="@string/categorias"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_promocao" />
 
     <LinearLayout
+        android:layout_marginHorizontal="10dp"
         android:id="@+id/linear_categorias"
         style="@style/Container_Categorias_Home_Page"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,23 +159,28 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            android:layout_marginEnd="10dp"
             android:id="@+id/MaterialCardPizzaDoce"
             style="@style/MaterialCard_Categorias_Home_Page">
 
             <ImageView
                 style="@style/ImageView_Categoria_Home_Page"
+                android:layout_marginTop="3dp"
                 android:src="@drawable/imagem_pizza_chocolate_preto_e_branco" />
 
             <TextView
                 android:id="@+id/text_pizza_doce"
                 style="@style/Small_Text_Home_Page"
+                android:layout_marginTop="40dp"
                 android:text="@string/doce" />
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
+
     <TextView
         android:id="@+id/txt_categoria_selecionada"
         style="@style/Medium_Text_Home_Page"
+        android:textStyle="bold"
         android:text="@string/pizza"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linear_categorias" />
@@ -157,7 +188,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         style="@style/RecyclerView_Home_Page"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_categoria_selecionada" />
 </androidx.constraintlayout.widget.ConstraintLayout>
