@@ -8,10 +8,22 @@
     tools:context=".activities.LoginPage"
     tools:ignore="MissingClass">
 
+    <ImageView
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/imagem_ze_entrada"
+        android:layout_width="140dp"
+        android:scaleType="fitXY"
+        android:layout_height="140dp"/>
+
 
     <TextView
         android:id="@+id/text_cadastrar"
         style="@style/Big_Text_Home_Page"
+        android:textSize="22sp"
+        android:layout_marginTop="170dp"
         android:text="La Bella\nPizzaria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,6 +32,7 @@
     <TextView
         style="@style/Medium_Text_Login_Page"
         android:layout_marginStart="0dp"
+        android:textSize="10sp"
         android:text="@string/delivery_app"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +41,7 @@
     <TextView
         android:id="@+id/textView_form_email"
         style="@style/Medium_Text_Login_Page"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="270dp"
         android:text="@string/email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -84,7 +97,7 @@ app:layout_constraintTop_toBottomOf="@id/layout_edit_senha" />
 <androidx.appcompat.widget.LinearLayoutCompat
 style="@style/Button_Login_Page"
 android:background="@drawable/button_shape"
-android:backgroundTint="@color/black"
+android:backgroundTint="@color/dark_green"
 android:id="@+id/container_progressBar"
 android:visibility="gone"
 app:layout_constraintEnd_toEndOf="parent"

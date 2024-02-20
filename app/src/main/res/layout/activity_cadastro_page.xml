@@ -105,7 +105,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/container_progressBar"
         style="@style/Button_Cadastro_Page"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/dark_green"
         android:visibility="gone"
         android:background="@drawable/button_shape"
         app:layout_constraintEnd_toEndOf="parent"
