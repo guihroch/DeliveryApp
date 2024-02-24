@@ -30,7 +30,6 @@
             android:layout_marginTop="50dp"
             android:layout_marginHorizontal="10dp"
             android:text="Hamburguer"
-            android:fontFamily="casual"
             android:textStyle="bold"
             android:textSize="12sp"
             android:textColor="@color/black"
