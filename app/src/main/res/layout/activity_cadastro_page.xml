@@ -36,13 +36,17 @@
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Custom_EditText"
         app:layout_constraintStart_toStartOf="parent"
+        app:helperTextEnabled="true"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView_nome"
-        android:id="@+id/edit_nome"
+        android:id="@+id/layout_edit_text_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_nome"
+            android:maxLines="1"
             android:background="@drawable/custom_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -50,8 +54,9 @@
 
     <TextView
         android:id="@+id/textView_email"
+        android:layout_marginTop="10dp"
         style="@style/Medium_Text_Cadastro_Page"
-        app:layout_constraintTop_toBottomOf="@id/edit_nome"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_nome"
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/email"
 
@@ -61,11 +66,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView_email"
-        android:id="@+id/edit_email"
+        android:id="@+id/layout_edit_text_email"
+        app:helperTextEnabled="true"
+        app:errorEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_email"
+            android:maxLines="1"
             android:background="@drawable/custom_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -74,19 +83,24 @@
         style="@style/Medium_Text_Cadastro_Page"
         android:id="@+id/text_senha"
         android:text="@string/senha"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_email"/>
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_email"/>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Custom_EditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_senha"
-        android:id="@+id/edit_senha"
+        android:id="@+id/layout_edit_text_senha"
+        app:helperTextEnabled="true"
+        app:errorEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_senha"
+            android:maxLines="1"
             android:background="@drawable/custom_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -94,23 +108,24 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_cadastrar"
+        android:visibility="visible"
         style="@style/Button_Cadastro_Page"
         android:text="@string/cadastrar"
         android:background="@drawable/button_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_senha"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_senha"
         />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/container_progressBar"
         style="@style/Button_Cadastro_Page"
         android:backgroundTint="@color/dark_green"
-        android:visibility="gone"
+        android:visibility="invisible"
         android:background="@drawable/button_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_senha"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_senha"
         >
 
         <ProgressBar

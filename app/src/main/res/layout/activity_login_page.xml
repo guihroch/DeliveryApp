@@ -4,27 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/dark_red"
     tools:context=".activities.LoginPage"
     tools:ignore="MissingClass">
 
-    <ImageView
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@drawable/background_container_login_page"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/imagem_ze_entrada"
-        android:layout_width="140dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
         android:scaleType="fitXY"
-        android:layout_height="140dp"/>
+        android:src="@drawable/imagem_ze_entrada"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/text_cadastrar"
         style="@style/Big_Text_Home_Page"
-        android:textSize="22sp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="220dp"
         android:text="La Bella\nPizzaria"
+        android:textColor="@color/white"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,8 +41,10 @@
     <TextView
         style="@style/Medium_Text_Login_Page"
         android:layout_marginStart="0dp"
-        android:textSize="10sp"
         android:text="@string/delivery_app"
+        android:fontFamily="casual"
+        android:textColor="@color/black"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_cadastrar" />
@@ -41,8 +52,11 @@
     <TextView
         android:id="@+id/textView_form_email"
         style="@style/Medium_Text_Login_Page"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="340dp"
         android:text="@string/email"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,11 +68,11 @@
         app:layout_constraintTop_toBottomOf="@id/textView_form_email">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:maxLines="1"
             android:id="@+id/edit_text_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/custom_edit_text" />
+            android:background="@drawable/custom_edit_text"
+            android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -66,78 +80,94 @@
         style="@style/Medium_Text_Login_Page"
         android:layout_marginTop="20dp"
         android:text="@string/senha"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_edit_email" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_edit_senha"
+        app:passwordToggleEnabled="true"
         style="@style/Custom_EditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_senha">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:maxLines="1"
-        android:id="@+id/edit_text_senha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_edit_text" />
-</com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textPassword"
+            android:id="@+id/edit_text_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_edit_text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-<androidx.appcompat.widget.AppCompatButton
-style="@style/Button_Login_Page"
-android:background="@drawable/button_shape"
-android:id="@+id/button_login"
-android:text="@string/login"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@id/layout_edit_senha" />
-
-<androidx.appcompat.widget.LinearLayoutCompat
-style="@style/Button_Login_Page"
-android:background="@drawable/button_shape"
-android:backgroundTint="@color/dark_green"
-android:id="@+id/container_progressBar"
-android:visibility="gone"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@id/layout_edit_senha">
-
-<ProgressBar
-    style="@style/Custom_ProgressBar"
-    android:id="@+id/progressBar" />
-</androidx.appcompat.widget.LinearLayoutCompat><LinearLayout
-style="@style/Container_Cadastrar_Login_Page"
-android:id="@+id/linear_to_cadastro"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@id/button_login">
-<TextView
-    style="@style/Medium_Text_Login_Page"
-    android:layout_marginStart="0dp"
-    android:text="@string/ainda_n_o_possui_cadastro"
-
-    />
-
-<TextView
-    style="@style/Medium_Text_Login_Page"
-    android:id="@+id/text_to_cadastro_page"
-    android:layout_marginStart="5dp"
-    android:text="@string/cadastrar"
-    android:textColor="@color/dark_red" />
-</LinearLayout>
-
-    <TextView
-        android:textSize="10sp"
-        android:layout_marginHorizontal="20dp"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_login"
+        style="@style/Button_Login_Page"
+        android:background="@drawable/button_shape"
+        android:text="@string/login"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_to_cadastro" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/container_progressBar"
+        style="@style/Button_Login_Page"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/dark_green"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_to_cadastro">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Custom_ProgressBar" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:id="@+id/linear_to_cadastro"
+        style="@style/Container_Cadastrar_Login_Page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_senha">
+
+        <TextView
+            style="@style/Medium_Text_Login_Page"
+            android:layout_marginStart="0dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="Ainda não possui uma conta?"
+            android:textColor="@color/black"
+
+            />
+
+        <TextView
+            android:id="@+id/text_to_cadastro_page"
+            style="@style/Medium_Text_Login_Page"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:text="Cadastre-se"
+            android:textColor="@color/dark_red" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="Rua Henrique Moscoso, 210 - Praia da Costa, Vila Velha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

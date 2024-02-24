@@ -19,7 +19,7 @@
         android:id="@+id/text_form_pagamento"
         style="@style/Big_Text_Pagamento_Page"
         android:layout_marginTop="70dp"
-        android:text="@string/formas_de_pagamento"
+        android:text="Pagamento na Entrega"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

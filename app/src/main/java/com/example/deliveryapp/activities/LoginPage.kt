@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.Toast
 import com.example.deliveryapp.R
 import com.example.deliveryapp.databinding.ActivityLoginPageBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginPage : AppCompatActivity() {
     private lateinit var binding: ActivityLoginPageBinding
@@ -35,15 +36,28 @@ class LoginPage : AppCompatActivity() {
     }
 
     private fun autenticacaoLogin() {
+        val auth = FirebaseAuth.getInstance()
+        val email = binding.editTextEmail.text.toString()
+        val senha = binding.editTextSenha.text.toString()
+
         binding.buttonLogin.visibility = View.INVISIBLE
         binding.containerProgressBar.visibility = View.VISIBLE
-        Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, HomePage::class.java)
-            startActivity(intent)
+
+        auth.signInWithEmailAndPassword(email, senha).addOnCompleteListener { autenticacao ->
+            if (autenticacao.isSuccessful) {
+               Handler(Looper.getMainLooper()).postDelayed({
+                   binding.buttonLogin.visibility = View.VISIBLE
+                   binding.containerProgressBar.visibility = View.INVISIBLE
+                   Toast.makeText(this, "Sucesso", Toast.LENGTH_SHORT).show()
+                   val intent = Intent(this, HomePage::class.java)
+                   startActivity(intent)
+               },1500)
+            }
+        }.addOnFailureListener {
             binding.buttonLogin.visibility = View.VISIBLE
             binding.containerProgressBar.visibility = View.GONE
-            Toast.makeText(this, "Logado com Sucesso!", Toast.LENGTH_SHORT).show()
-        }, 1500)
+            Toast.makeText(this, "Email ou senha inválidos!", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun verificarCamposPreenchidos() {
@@ -69,12 +83,7 @@ class LoginPage : AppCompatActivity() {
                     binding.layoutEditSenha.helperText = ""
                 }, 2000)
             }
-            senha.length < 6 -> {
-                binding.layoutEditSenha.helperText = "Digite uma senha com pelo menos 6 caracteres"
-                Handler(Looper.getMainLooper()).postDelayed({
-                    binding.layoutEditSenha.helperText = ""
-                }, 2000)
-            }
+
             else -> {
                 autenticacaoLogin()
             }
