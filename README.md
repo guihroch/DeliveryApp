@@ -16,11 +16,16 @@
 DESCRIÇÃO DO PROJETO FOCADA NAS FEATURES (FUNCIONALIDADES). VOCÊ ESTA VENDENDO SUAS HABILIDADES, NÃO A IDEIA DO SEU APP!
 
 </p>
-
+ 
 </br>
 
 <p float="left" align="center">
-TELAS DO APLICATIVO. FOQUE EM MOSTRAR O QUE É BONITO E IMPORTANTE NO SEU APLICATIVO
+<img alt="screenshots" width="30%" src="screenshots/screenshot1.png"/>
+  <img alt="screenshots" width="30%" src="screenshots/screenshot2.png"/>
+  <img alt="screenshots" width="30%" src="screenshots/screenshot3.png"/>
+  <img alt="screenshots" width="30%" src="screenshots/screenshot4.png"/>
+  <img alt="screenshots" width="30%" src="screenshots/screenshot5.png"/>
+  <img alt="screenshots" width="30%" src="screenshots/screenshot6.png"/>
 </p>
 
 ## Download
