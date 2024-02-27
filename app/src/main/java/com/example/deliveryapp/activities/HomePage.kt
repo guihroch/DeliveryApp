@@ -1,6 +1,7 @@
 package com.example.deliveryapp.activities
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.deliveryapp.R
@@ -50,14 +52,26 @@ class HomePage : AppCompatActivity() {
             binding.MaterialCardPizzaDoce.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
             binding.textPizzaDoce.setTextColor(Color.parseColor("#FF000000"))
 
+        }
 
-
-          //  binding.MaterialCardPizzaDoce.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
-           // binding.textPizzaDoce.setTextColor(Color.parseColor("#85040F"))
-
+        binding.icLogout.setOnClickListener {
+            alertDialogLogout()
         }
 
 
+    }
+
+    private fun alertDialogLogout(){
+        AlertDialog.Builder(this)
+            .setTitle("Logout")
+            .setMessage("Deseja realmente sair?")
+            .setNegativeButton("Não", DialogInterface.OnClickListener { dialogInterface, i ->
+                })
+            .setPositiveButton("Sim", DialogInterface.OnClickListener { dialogInterface, i ->
+                val intent = Intent(this, LoginPage::class.java)
+                startActivity(intent)})
+            .create()
+            .show()
     }
 
 

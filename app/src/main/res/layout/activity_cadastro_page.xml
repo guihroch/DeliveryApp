@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/dark_red"
     tools:context=".activities.LoginPage">
 
     <ImageView
@@ -14,15 +14,34 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+
+        android:background="@drawable/background_container_login_page"
+        android:layout_height="560dp"/>
+
 
     <TextView
         android:id="@+id/text_cadastrar"
+        android:textColor="@color/white"
         style="@style/Big_Text_Cadastro_Page"
-        android:text="@string/cadastro"
+        android:text="Bem vindo! "
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
+
+    <TextView
+        android:text="Informe seus dados para prosseguimos"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
     <TextView
@@ -30,7 +49,7 @@
         android:id="@+id/textView_nome"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="250dp"
         android:text="@string/nome_completo"
         />
     <com.google.android.material.textfield.TextInputLayout
@@ -46,6 +65,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_nome"
+            android:inputType="text"
             android:maxLines="1"
             android:background="@drawable/custom_edit_text"
             android:layout_width="match_parent"
@@ -75,6 +95,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_email"
             android:maxLines="1"
+            android:inputType="textEmailAddress"
             android:background="@drawable/custom_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

@@ -215,6 +215,7 @@
         android:id="@+id/arrow_back_home_page"
         android:src="@drawable/ic_arrow_back"
         android:layout_margin="20dp"
+        android:backgroundTint="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="wrap_content"

@@ -95,7 +95,7 @@ class CadastroPage : AppCompatActivity() {
                 Handler(Looper.getMainLooper()).postDelayed({
                     binding.buttonCadastrar.visibility = View.VISIBLE
                     binding.containerProgressBar.visibility = View.GONE
-                    Toast.makeText(this, "Cadastrado com Sucesso!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_LONG).show()
                 }, 2000)
             }
 
