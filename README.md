@@ -1,4 +1,4 @@
-<h1 align="center">NOME DO APLICATIVO</h1>
+<h1 align="center">DELIVERY APP</h1>
 
 <p align="center">
   TAG DA LICENÇA <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
