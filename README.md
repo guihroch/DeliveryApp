@@ -1,4 +1,4 @@
-<h1 align="center">NOME DO APLICATIVO</h1>
+<h1 align="center">DELIVERY APP</h1>
 
 <p align="center">
   TAG DA LICENÇA <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -21,11 +21,11 @@ DESCRIÇÃO DO PROJETO FOCADA NAS FEATURES (FUNCIONALIDADES). VOCÊ ESTA VENDEND
 
 <p float="left" align="center">
 <img alt="screenshots" width="30%" src="screenshots/screenshot1.png"/>
+  <img alt="screenshots" width="30%" src="screenshots/screenshot5.png"/>
   <img alt="screenshots" width="30%" src="screenshots/screenshot2.png"/>
   <img alt="screenshots" width="30%" src="screenshots/screenshot3.png"/>
   <img alt="screenshots" width="30%" src="screenshots/screenshot4.png"/>
-  <img alt="screenshots" width="30%" src="screenshots/screenshot5.png"/>
-  <img alt="screenshots" width="30%" src="screenshots/screenshot6.png"/>
+
 </p>
 
 ## Download
