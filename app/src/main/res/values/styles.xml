@@ -185,14 +185,14 @@
 
  //Detalhes Page
     <style name="Small_Text_Detalhes_Page">
-        <item name="fontFamily">casual</item>
+
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">14sp</item>
     </style>
 
     <style name="Medium_Text_Detalhes_Page" >
-        <item name="fontFamily">casual</item>
+
         <item name="android:textSize">14sp</item>
         <item name="android:layout_marginStart">20dp</item>
         <item name="android:layout_marginTop">20dp</item>
@@ -203,7 +203,7 @@
 
     <style name="Big_Text_Detalhes_Page">
         <item name="android:textSize">20sp</item>
-        <item name="fontFamily">casual</item>
+
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">wrap_content</item>
@@ -215,7 +215,7 @@
         <item name="android:layout_height">25dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
-        <item name="fontFamily">casual</item>
+
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -254,7 +254,6 @@
 
     //Pagamento Page
     <style name="Small_Text_Pagamento_Page">
-        <item name="fontFamily">casual</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">12sp</item>
@@ -263,7 +262,6 @@
     </style>
 
     <style name="Medium_Text_Pagamento_Page" >
-        <item name="fontFamily">casual</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
@@ -273,7 +271,6 @@
 
     <style name="Big_Text_Pagamento_Page">
         <item name="android:textSize">18sp</item>
-        <item name="fontFamily">casual</item>
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:layout_marginStart">20dp</item>
         <item name="android:textStyle">bold</item>
@@ -301,8 +298,6 @@
     <item name="android:gravity">center</item>
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">55dp</item>
-    <item name="android:textSize">14sp</item>
-    <item name="fontFamily">casual</item>
     <item name="android:textStyle">bold</item>
     <item name="android:letterSpacing">0.1</item>
     </style>
