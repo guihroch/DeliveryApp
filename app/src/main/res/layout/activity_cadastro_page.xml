@@ -122,6 +122,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_senha"
             android:maxLines="1"
+            android:inputType="textPassword"
             android:background="@drawable/custom_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

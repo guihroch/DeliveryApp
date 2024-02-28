@@ -131,9 +131,13 @@
         <TextView
             style="@style/Text_Promocao_Home_Page"
             android:textSize="14sp"
-            android:textStyle="bold"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+
             android:background="@drawable/bg_promocao"
-            android:text="Pizza\n+\nRefrigerante 1,5L" />
+            android:text="Pizza\n+\nRefrigerante 1,5L\nGrátis!" />
     </androidx.cardview.widget.CardView>
 
 
