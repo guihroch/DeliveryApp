@@ -24,15 +24,15 @@
         android:src="@drawable/imagem_ze_entrada"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
 
     <TextView
-        android:id="@+id/text_cadastrar"
+        android:id="@+id/text_la_bella_pizzaria"
         style="@style/Big_Text_Home_Page"
         android:layout_marginTop="220dp"
-        android:text="La Bella\nPizzaria"
-        android:textColor="@color/white"
+        android:text="@string/la_bella_npizzaria"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,22 +41,21 @@
     <TextView
         style="@style/Medium_Text_Login_Page"
         android:layout_marginStart="0dp"
-        android:text="@string/delivery_app"
         android:fontFamily="casual"
+        android:text="@string/delivery_app"
         android:textColor="@color/black"
         android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_cadastrar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_la_bella_pizzaria"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/textView_form_email"
         style="@style/Medium_Text_Login_Page"
         android:layout_marginTop="340dp"
         android:text="@string/email"
-        android:textStyle="normal"
         android:textSize="12sp"
-        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,8 +81,6 @@
         android:layout_marginTop="20dp"
         android:text="@string/senha"
         android:textSize="12sp"
-        android:textStyle="normal"
-        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_edit_email" />
 
@@ -143,7 +140,7 @@
             android:layout_marginStart="0dp"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:text="Ainda não possui uma conta?"
+            android:text="@string/ainda_n_o_possui_uma_conta"
             android:textColor="@color/black"
 
             />
@@ -153,22 +150,22 @@
             style="@style/Medium_Text_Login_Page"
             android:layout_marginStart="5dp"
             android:textSize="12sp"
-            android:text="Cadastre-se"
+            android:textStyle="bold"
+            android:text="@string/cadastre_se"
             android:textColor="@color/dark_red" />
     </LinearLayout>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/Small_Text_Home_Page"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:text="Rua Henrique Moscoso, 210 - Praia da Costa, Vila Velha"
+        android:text="@string/rua_henrique_moscoso_210_praia_da_costa_vila_velha"
         android:textColor="@color/black"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

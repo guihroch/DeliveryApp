@@ -12,23 +12,18 @@
         android:id="@+id/linear_app_bar"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-
         android:background="@drawable/background_toolbar"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/text_entregar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Small_Text_Home_Page"
             android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:text="Localização Atual"
-            android:textSize="14sp"
+            android:text="@string/localiza_o_atual"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,11 +56,9 @@
                 android:src="@drawable/ic_location" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                style="@style/Small_Text_Home_Page"
                 android:layout_marginEnd="20dp"
-                android:text="R. Inácio Higino, 600"
+                android:text="@string/r_in_cio_higino_600"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
@@ -94,11 +87,12 @@
             android:textSize="20sp" />
 
         <TextView
+            style="@style/Small_Text_Home_Page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textColor="@color/black"
-            android:text="Faça já o seu pedido!"
+            android:text="@string/fa_a_j_o_seu_pedido"
             android:textSize="14sp"
              />
     </androidx.appcompat.widget.LinearLayoutCompat>

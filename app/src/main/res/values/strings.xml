@@ -44,4 +44,11 @@
     <string name="cart_o_de_cr_dito">Cartão de Crédito</string>
     <string name="cart_o_de_d_bito">Cartão de Débito</string>
     <string name="dinheiro">Dinheiro</string>
+    <string name="localiza_o_atual">Localização Atual</string>
+    <string name="r_in_cio_higino_600">R. Inácio Higino, 600</string>
+    <string name="la_bella_npizzaria">La Bella\nPizzaria</string>
+    <string name="ainda_n_o_possui_uma_conta">Ainda não possui uma conta?</string>
+    <string name="cadastre_se">Cadastre-se</string>
+    <string name="rua_henrique_moscoso_210_praia_da_costa_vila_velha">Rua Henrique Moscoso, 210 - Praia da Costa, Vila Velha</string>
+    <string name="fa_a_j_o_seu_pedido">Faça já o seu pedido!</string>
 </resources>
