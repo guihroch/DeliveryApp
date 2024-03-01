@@ -39,10 +39,10 @@ Ou faça o download da <a href="apk/app-debug.apk?raw=true">APK diretamente</a>.
 - [Linguagem Kotlin](https://kotlinlang.org/).
 
 - Jetpack 
-  - Lifecycle: Observe os ciclos de vida do Android e manipule os estados da interface do usuário após as alterações do ciclo de vida.
+  - Lifecycle: Observa os ciclos de vida do Android e manipula os estados da interface do usuário após as alterações do ciclo de vida.
   - RecyclerView: Permite a criação de listas dinâmicas através do reaproveitamento de itens presentes na mesma, melhorando o desempenho do app.
   - ViewBinding: Liga os componentes do XML no Kotlin através de uma classe que garante segurança de tipo e outras vantagens.
-  - Custom Views: View customizadas feitas do zero usando XML.
+  - Custom Views: View customizadas utilizando o XML.
   - Material Design Components: Permite a criação de uma interface de usuário utilizando diversos componentes interativos e personalizáveis.
   - ConstraintLayout: Permite a criação de layouts complexos sem a necessidade de uma hierarquia de visualização aninhada.
   
@@ -51,15 +51,12 @@ Ou faça o download da <a href="apk/app-debug.apk?raw=true">APK diretamente</a>.
 
 
 ## Arquitetura
-APRESENTE A ARQUITETURA UTILIZADA NO PROJETO
-**Nome do aplicativo** utiliza a arquitetura MVVM e o padrão de Repositories, que segue as [recomendações oficiais do Google](https://developer.android.com/topic/architecture).
+****Delivery App**** utiliza a arquitetura MVC (Model - View - Controller) que é um padrão de projeto de software que separa a interface do usuário (View) e das regras de negócio e dados (Model) usando um mediador (Controller) para conectar o modelo à view. 
 </br></br>
-ADICIONE UM FLUXOGRAMA DA ARQUITETURA UTILIZADA - https://excalidraw.com/
+<img alt="screenshots" width="80%" src="screenshots/mvc_atualizado.png"/>
+<br>
 <br>
 
-## API de terceiros
-
-COLOQUE O NOME, LINK E DESCRIÇÃO DAS APIS UTILIZADAS NO PROJETO
 
 ## Features
 
@@ -77,6 +74,18 @@ Texto de Exemplo.
 
 COLOQUE A LICENÇA - https://opensource.org/licenses
 
-```xml
+```
+        Copyright [2023] [Guilherme Henrique Martins Rocha]
 
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
 ```
