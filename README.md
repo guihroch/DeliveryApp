@@ -72,7 +72,7 @@ Texto de exemplo
 <img src="screenshots/feature3.gif" width="25%"/>
 
 ### Feature 4
-<img src="screenshots/feature4.gif" width="25%"/>
+<img src="screenshots/feature1.gif" width="25%"/>
 
 
 # Licença
