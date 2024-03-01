@@ -51,10 +51,10 @@ Ou faça o download da <a href="apk/app-debug.apk?raw=true">APK diretamente</a>.
 
 
 ## Arquitetura
-APRESENTE A ARQUITETURA UTILIZADA NO PROJETO
-**Nome do aplicativo** utiliza a arquitetura MVVM e o padrão de Repositories, que segue as [recomendações oficiais do Google](https://developer.android.com/topic/architecture).
+****Delivery App**** utiliza a arquitetura MVC (Model - View - Controller) que é um padrão de projeto de software que separa a interface do usuário (View) e das regras de negócio e dados (Model) usando um mediador (Controller) para conectar o modelo à view. 
 </br></br>
-ADICIONE UM FLUXOGRAMA DA ARQUITETURA UTILIZADA - https://excalidraw.com/
+<img alt="screenshots" width="80%" src="screenshots/mvc_atualizado.png"/>
+<br>
 <br>
 
 ## API de terceiros
