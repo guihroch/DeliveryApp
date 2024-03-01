@@ -61,14 +61,19 @@ Ou faça o download da <a href="apk/app-debug.apk?raw=true">APK diretamente</a>.
 ## Features
 
 ### Feature 1
-<img src="screenshots/feature-1.gif" width="25%"/>
+<img src="screenshots/feature1.gif" width="25%"/>
 
 Texto de exemplo
 
 ### Feature 2
-<img src="screenshots/feature-2.gif" width="25%"/>
+<img src="screenshots/feature2.gif" width="25%"/>
 
-Texto de Exemplo.
+### Feature 3
+<img src="screenshots/feature3.gif" width="25%"/>
+
+### Feature 4
+<img src="screenshots/feature4.gif" width="25%"/>
+
 
 # Licença
 
