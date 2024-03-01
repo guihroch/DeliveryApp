@@ -13,7 +13,7 @@
 
  Esse é um projeto para demonstrar meu conhecimento técnico no desenvolvimento Android nativo com Kotlin. Mais informações técnicas abaixo.
 
- Aplicativo de Delivery onde o usuário precisa realizar cadastro e login para acessar o conteúdo. O App simula um aplicativo personalizado de pizzaria, onde ele pode optar por diversas opções de sabores. UI simples para favorecer uma melhor experiência para o usuário. Contém a pagina principal com todos os sabores disponíveis, tela de detalhes e tela de pagamento.
+ Aplicativo de Delivery personalizado, contendo UI simples para favorecer uma melhor experiência para o usuário. O App simula um aplicativo de pizzaria local, onde o usuário pode optar por diversas opções de sabores. Contém a pagina principal com todos os sabores disponíveis, tela de detalhes e tela de pagamento.
 
 </p>
  
