@@ -48,7 +48,7 @@ Ou faça o download da <a href="apk/app-debug.apk?raw=true">APK diretamente</a>.
   
 - Bibliotecas
   - [Firebase Authentication](https://firebase.google.com/docs/auth?hl=pt): O Firebase Authentication é um serviço de back-end projetado para simplificar o processo de autenticação de usuários.
-  - Lottie:
+  - [Lottie](https://developers.lottiefiles.com/):
 
 
 ## Arquitetura
@@ -61,20 +61,37 @@ Ou faça o download da <a href="apk/app-debug.apk?raw=true">APK diretamente</a>.
 
 ## Features
 
-### Feature 1
+### Tela de Login
 <img src="screenshots/feature1.gif" width="25%"/>
 
-Texto de exemplo
+Na tela inicial o usuário deve realizar o processo de autenticação através do Firebase Authentication, caso ja possua cadastro.
+Caso não seja cadastrado, ele poderá seguir para a tela de cadastro. Se o usuário digitar algum email ou senha inválido, ele 
+será notificado por um Toast informando o erro. Caso a autenticação ocorra normalmente, o usuário será encaminhado para a pagina
+principal do aplicativo, após alguns segundos.
 
-### Feature 2
+### Tela Principal
 <img src="screenshots/feature2.gif" width="25%"/>
 
-### Feature 3
+Na Tela principal o usuário terá acesso a diversas opções de sabores, podendo alternar entre as pizzas tradicionais e doces, refletindo
+diretamente nos sabores apresentados na tela. As opções de pizza são apresentadas através de uma RecyclerView no sentindo horizontal
+permitindo a rolagem dos produtos de forma didática ao usuário. Ao clicar no botão com o simbolo de adicionar, o usuário é encaminhado para
+a Tela de Detalhes, onde temos a atualização do valor total influênciado diretamente pela quantidade selecionada. Após selecionar uma bebida e clicar em
+Finalizar Compra, o usuário é encaminhado para a Tela de Pagamento.
+
+### Tela de Pagamento
 <img src="screenshots/feature3.gif" width="25%"/>
 
-### Feature 4
+Na Tela de Pagamento o usuário deve escolher a opção de pagamento que será realizada na entrada. Caso seja pago em dinheiro, é obrigatório informar o valor para troco.
+Após selecionada a forma de pagamento o usuário deve clicar em "Pagar" para finalizar o pedido, onde será simulado uma requisição para validar o pedido realizado
+e após alguns segundos, será encaminhado para uma nova tela com animação, informando que o pedido foi realizado com sucesso, retornando a Tela Principal automaticamente.
+No canto superior direito está presente o icone de logout, ao clicar será exibida uma Alert Dialog, onde o usuário pode escolher se desconectar do aplicativo.
+
+### Tela de Cadastro
 <img src="screenshots/feature4.gif" width="25%"/>
 
+Na Tela de Cadastro o usuário deve fornecer os dados exigidos, caso deixe algum espaço em branco, utilize um email no formato inválido ou email ja existente, ou digite
+uma senha com menos de 6 caracteres, ele será alertado através do HelperText, exibindo uma mensagem específica para cada erro citado. Caso forneça todos os dados corretamente
+o usuário aguardará brevemente o processo de cadastro através do carregamento de uma ProgressBar e em seguida receberá um Toast informando que o cadastro foi realizado.
 
 # Licença
 
