@@ -44,7 +44,7 @@
   
 - Bibliotecas
   - [Firebase Authentication](https://firebase.google.com/docs/auth?hl=pt): O Firebase Authentication é um serviço de back-end projetado para simplificar o processo de autenticação de usuários.
-  - [Lottie](https://developers.lottiefiles.com/):Lottie é uma que renderiza animações em tempo real, permitindo que os aplicativos usem animações com a mesma facilidade com que usam imagens estática
+  - [Lottie](https://developers.lottiefiles.com/): Lottie é uma biblioteca que renderiza animações em tempo real, permitindo que os aplicativos usem animações com a mesma facilidade com que usam imagens estática
 
 
 ## Arquitetura
