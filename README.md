@@ -11,7 +11,7 @@
 
 <p align="center">  
 
- 💻  Projeto criado para demonstrar meu conhecimento técnico no desenvolvimento Android nativo com Kotlin. Mais informações técnicas abaixo. 
+ 💻  Projeto criado para demonstrar meu conhecimento técnico no desenvolvimento Android nativo com Kotlin.  
 
 🍕 Aplicativo de Delivery personalizado, contendo UI simples para favorecer uma melhor experiência para o usuário. O App simula um aplicativo de pizzaria local, onde o usuário pode optar por diversas opções de sabores. Contém a pagina principal com todos os sabores disponíveis, tela de detalhes e tela de pagamento. 
 
