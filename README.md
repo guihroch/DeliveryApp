@@ -91,8 +91,6 @@ o usuário aguardará brevemente o processo de cadastro através do carregamento
 
 # Licença
 
-COLOQUE A LICENÇA - https://opensource.org/licenses
-
 ```
         Copyright [2023] [Guilherme Henrique Martins Rocha]
 
