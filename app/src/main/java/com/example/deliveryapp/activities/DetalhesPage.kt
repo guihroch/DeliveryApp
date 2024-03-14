@@ -22,7 +22,7 @@ class DetalhesPage : AppCompatActivity() {
         window.statusBarColor = Color.parseColor("#FF000000")
 
         val nome = intent.extras?.getString("nome")
-        val img = intent.extras?.getInt("img")
+        val img = intent.extras?.getString("img")?.toInt()
         val valor = intent.extras?.getString("valor")?.toDouble()
         val detalhe = intent.extras?.getString("detalhe")
 
