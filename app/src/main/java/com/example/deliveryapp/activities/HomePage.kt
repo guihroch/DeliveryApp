@@ -1,5 +1,6 @@
 package com.example.deliveryapp.activities
 
+import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
@@ -19,6 +20,7 @@ class HomePage : AppCompatActivity() {
     private val listaPizzaDoce:MutableList<Produto> = mutableListOf()
 
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomePageBinding.inflate(layoutInflater)
@@ -33,9 +35,9 @@ class HomePage : AppCompatActivity() {
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         produtoAdapter = ProdutoAdapter(this, listaPizzaSalgada)
         recyclerView.adapter = produtoAdapter
-        produtoAdapter.notifyDataSetChanged()
         val db = DB()
         db.recuperarPizzaSalgada(listaPizzaSalgada, produtoAdapter)
+
 
 
 
@@ -45,10 +47,13 @@ class HomePage : AppCompatActivity() {
             recyclerView.layoutManager =
                 LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
             produtoAdapter = ProdutoAdapter(this, listaPizzaDoce)
-            produtoAdapter.notifyDataSetChanged()
-            recyclerView.adapter = produtoAdapter
-            val db = DB()
-            db.recuperarPizzaDoce(listaPizzaDoce, produtoAdapter)
+            if (listaPizzaDoce.isEmpty()) {
+                recyclerView.adapter = produtoAdapter
+                db.recuperarPizzaDoce(listaPizzaDoce, produtoAdapter)
+            } else {
+
+            }
+
 
             binding.MaterialCardPizzaDoce.setCardBackgroundColor(Color.parseColor("#85040F"))
             binding.textPizzaDoce.setTextColor(Color.parseColor("#FFFFFFFF"))
