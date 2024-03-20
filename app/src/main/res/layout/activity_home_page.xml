@@ -193,16 +193,27 @@
         style="@style/Medium_Text_Home_Page"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:text="@string/pizza"
+        android:text="@string/pizza_tradicional"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linear_categorias" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:visibility="invisible"
         android:id="@+id/recyclerView"
         style="@style/RecyclerView_Home_Page"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_categoria_selecionada" />
+
+    <ProgressBar
+        android:id="@+id/progress_recyclerview"
+        android:layout_width="34dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="80dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_categoria_selecionada" />
 </androidx.constraintlayout.widget.ConstraintLayout>

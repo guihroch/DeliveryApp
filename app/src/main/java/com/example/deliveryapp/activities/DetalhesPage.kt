@@ -6,6 +6,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.example.deliveryapp.R
 import com.example.deliveryapp.databinding.ActivityDetalhesPageBinding
 import java.text.DecimalFormat
@@ -22,9 +23,11 @@ class DetalhesPage : AppCompatActivity() {
         window.statusBarColor = Color.parseColor("#FF000000")
 
         val nome = intent.extras?.getString("nome")
-        val img = intent.extras?.getString("img")?.toInt()
+        val img = intent.extras?.getString("img")
         val valor = intent.extras?.getString("valor")?.toDouble()
         val detalhe = intent.extras?.getString("detalhe")
+
+
 
 
         binding.buttonAdicionar.setOnClickListener {
@@ -43,7 +46,7 @@ class DetalhesPage : AppCompatActivity() {
         }
 
 
-        binding.imgProduto.setBackgroundResource(img!!)
+        Glide.with(this).load(img).into(binding.imgProduto)
         binding.nomeProduto.text = nome
         binding.detalheProduto.text = detalhe
         val decimalFormat = DecimalFormat("##.00")

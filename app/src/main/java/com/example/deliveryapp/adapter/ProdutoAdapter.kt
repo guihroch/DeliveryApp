@@ -32,12 +32,12 @@ class ProdutoAdapter(
 
     @SuppressLint("SuspiciousIndentation")
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
-        Handler(Looper.getMainLooper()).postDelayed({
+
             holder.nome.visibility = View.VISIBLE
             holder.img.visibility = View.VISIBLE
             holder.linear_valor.visibility = View.VISIBLE
             holder.progressbar.visibility = View.INVISIBLE
-        }, 1500)
+
         holder.nome.text = listaProdutos[position].nome
         Glide.with(context).load(listaProdutos[position].img).into(holder.img)
         holder.valor.text = listaProdutos[position].valor
